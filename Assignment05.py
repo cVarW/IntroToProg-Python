@@ -47,7 +47,7 @@ while (True):
     if (strChoice.strip() == '1'):
         # TODO: Add Code Here
         for row in lstTable:
-            print("\t", row)
+            print("\t", row["Task"], ", ", row["Priority"])
         continue
     # Step 4 - Add a new item to the list/Table
     elif (strChoice.strip() == '2'):
@@ -64,9 +64,6 @@ while (True):
             if row["Task"].lower() == strI.lower():
                 lstTable.remove(row)
                 print("Task removed.")
-            else:
-                print("Task not in list.")
-                break
         continue
     # Step 6 - Save tasks to the ToDoList.txt file
     elif (strChoice.strip() == '4'):
