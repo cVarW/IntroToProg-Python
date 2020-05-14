@@ -1,0 +1,9 @@
+pseudocode,5
+code,3
+test,3
+debug,3
+test,3
+GitHub,5
+Documentation,5
+editCode,3
+editDoc,3
