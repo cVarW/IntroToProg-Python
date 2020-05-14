@@ -55,8 +55,6 @@ while (True):
         strT = input("Enter your new task: ")
         strP = input("It's priority [1 to 5]: ")
         lstTable.append({"Task": strT, "Priority": strP})
-        for row in lstTable:
-            print("\t", row)
         continue
     # Step 5 - Remove a new item from the list/Table
     elif (strChoice.strip() == '3'):
@@ -66,13 +64,17 @@ while (True):
             if row["Task"].lower() == strI.lower():
                 lstTable.remove(row)
                 print("Task removed.")
+            else:
+                print("Task not in list.")
+                break
         continue
-    # Step 6 - Save tasks to the ToDoToDoList.txt file
+    # Step 6 - Save tasks to the ToDoList.txt file
     elif (strChoice.strip() == '4'):
         # TODO: Add Code Here
         strData = open(objFile, "w")
         for row in lstTable:
-            strData.write(str(row["Task"]) + "," + str(row["Priority"] + "\n"))
+            strData.write(str(row["Task"]) + "," 
+                          + str(row["Priority"] + "\n"))
         strData.close()
         print("All tasks saved to ToDoList.txt!")
         continue
